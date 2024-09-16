@@ -3,34 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Youtube Video Viewer</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure path is correct -->
+    <title>YouTube Video Viewer</title>
 </head>
 <body>
-    <footer>
-    </footer>
     <header>
-        <div class="tape">
-            <img src="Designing/CSTape.png" alt="Construction Tape">
+        <div class="header">  
+            <img src="Designing/HHC Logo.png" alt="Hard Hat Club Logo" class="logo">
         </div>
-        <div class="logo">  
-            <img src="Designing/HHC Logo.png"  alt="Hard Hat Club Logo">
-        </header>
-        <div class="image-container">
-            <h1 class="txtorganizer">How to Lay Bricks</h1>
-        <img src="Designing/blueprint background.jpg" class="bg">
-        </div>
-<div class="Video">
-<iframe
-width="560" 
-height="315" 
-src="https://www.youtube.com/embed/jDgEqhz94-Y?si=dCVqdUaSK4DN3J8f" 
-title="YouTube video player" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
-</div>
-</body>
+    </header>
 
+    <h1 class="title">How to Lay Bricks</h1>
+
+    <div class="video-container">
+        <iframe
+            class="video-player"
+            id="mainVideo"
+            name="YouTubeVideoPlayer"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/jDgEqhz94-Y?si=dCVqdUaSK4DN3J8f"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <details class="video-description">
+        <summary>Video Description</summary>
+        <p>This video provides a step-by-step guide on how to lay bricks for beginners, including using a line for alignment and setting a strong foundation.</p>
+    </details>
+
+    <div class="controls">
+        <label for="autoplayToggle">Auto-Play:</label>
+        <input type="checkbox" id="autoplayToggle">
+    </div>
+
+    <div class="video-category">
+        <label for="videoCategory">Choose a category:</label>
+        <select id="videoCategory" name="videoCategory">
+            <option value="bricklaying">Bricklaying</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+        </select>
+    </div>
+
+    <footer>
+        <p>Connect with us on:
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+</body>
 </html>
