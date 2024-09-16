@@ -1,56 +1,68 @@
-
-/* Pertains to the top of the website */
-.tape {
-    position: relative;
-    width: 100%;
-}
-
-.tape img {
-    width: 1330px;
-    height: 100%;
-    display: block;
+/* Style for header and logo */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 3px solid #ffb482;
 }
 
 .logo {
-    position:absolute;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-}
-
-.logo img {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
+    margin-right: 15px;
 }
 
-/* Controls the position of the embedded YT video*/
-.Video {
-    position: absolute; /* Position the video absolutely within the container */
-    top: 180px;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* Center the title */
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+/* Video description styling */
+.video-description {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Style for video container to center the video */
+.video-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;   
+    margin: 20px auto;
+    width: 50%;
 }
 
-.txtorganizer {
-        position: absolute;
-        z-index: 1;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-.image-container {
-display: inline-block; /* Ensures the container fits the image size */
-overflow: hidden; /* Clips the blur effect within the container */
+/* Styling for controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
-    
-.bg {
-    width: 1330px; /* Set your desired width */
-    height: auto; /* Set your desired height */
-    background-size: cover;
-    filter: blur(5px);
-     overflow: hidden; 
+
+/* Styling for video category dropdown */
+.video-category {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 3px solid #ffb482;
+}
+
+/* Basic reset for body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 80px;
 }
