@@ -1,15 +1,14 @@
 body {
     margin: 0;
-    padding-bottom: 80px; /* Adjusted to ensure footer visibility */
-    margin: 0;
+    padding-bottom: 80px; 
     font-family: Arial, sans-serif;
     cursor: url('Designing/hammer.png'), auto; 
-    
+    background-color: #be8f0b; /* Add your desired background color here */
 }
-
 body:active {
     cursor: url('Designing/hammerclick.png'), auto; /* Cursor when clicked */
 }
+
 /* Other CSS styles */
 .header {
     display: flex;
@@ -23,6 +22,10 @@ body:active {
     width: 150px;
     height: auto;
     margin-right: 15px;
+}
+/* Keeps Resources Organized*/
+.resources-links {
+    position: lef;
 }
 
 /* Center the title */
