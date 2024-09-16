@@ -1,4 +1,16 @@
-/* Style for header and logo */
+body {
+    margin: 0;
+    padding-bottom: 80px; /* Adjusted to ensure footer visibility */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    cursor: url('Designing/hammer.png'), auto; 
+    
+}
+
+body:active {
+    cursor: url('Designing/hammerclick.png'), auto; /* Cursor when clicked */
+}
+/* Other CSS styles */
 .header {
     display: flex;
     align-items: center;
@@ -20,13 +32,6 @@
     font-size: 2em;
 }
 
-/* Video description styling */
-.video-description {
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-}
-
 /* Style for video container to center the video */
 .video-container {
     display: flex;
@@ -34,6 +39,13 @@
     align-items: center;
     margin: 20px auto;
     width: 50%;
+}
+
+/* Video description styling */
+.video-description {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
 }
 
 /* Styling for controls */
@@ -52,17 +64,10 @@
 /* Footer styling */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #f1f1f1;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 30;
     border-top: 3px solid #ffb482;
-}
-
-/* Basic reset for body */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding-bottom: 80px;
 }
