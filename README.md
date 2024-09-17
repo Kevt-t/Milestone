@@ -15,3 +15,7 @@ Create an HTML webpage that embeds a Youtube Video viewer. The User Interface (U
 - [X] Add a toggle that will allow user toggle videos auto-play on or off  
 - [X] Add a dropbox box that allows users to select different categories of videos 
 
+Next Level Flex 
+- [X] Target level 12 indicators on the concept rubric 
+- [X] Style the background color of your page with an image that compliments the video
+- [] Add emoji to the summary for the title of the video 
