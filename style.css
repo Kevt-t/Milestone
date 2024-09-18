@@ -2,14 +2,14 @@ body {
     margin: 0;
     padding-bottom: 80px; 
     font-family: Arial, sans-serif;
-    cursor: url('Designing/hammer.png'), auto; 
-    background-color: #be8f0b; /* Add your desired background color here */
-}
+    cursor: url('Designing/hammer.png'), auto; /* Custom cursor */
+    background-color: #be8f0b; 
+
 body:active {
     cursor: url('Designing/hammerclick.png'), auto; /* Cursor when clicked */
 }
 
-/* Other CSS styles */
+/* Controls Logo Placement */
 .header {
     display: flex;
     align-items: center;
@@ -67,10 +67,10 @@ body:active {
 /* Footer styling */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 35px;
     background-color: #f1f1f1;
     position: absolute;
     width: 100%;
-    bottom: 30;
+    bottom:: 0px;
     border-top: 3px solid #ffb482;
 }
