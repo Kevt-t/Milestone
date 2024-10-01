@@ -1,3 +1,37 @@
+/* Default (Light Mode) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background: #fff;
+    --footer-background: #f1f1f1;
+    --border-color: #ffb482;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #333333;
+    --text-color: #f1f1f1;
+    --header-background: #444444;
+    --footer-background: #222222;
+    --border-color: #ffb482;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.header {
+    background-color: var(--header-background);
+    border-bottom: 3px solid var(--border-color);
+}
+
+footer {
+    background-color: var(--footer-background);
+    border-top: 3px solid var(--border-color);
+}
+
 /* Basic reset for body */
 body {
     font-family: Arial, sans-serif;
@@ -10,14 +44,24 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
-    border-bottom: 3px solid #ffb482;
 }
 
 .logo {
     width: 150px;
     height: auto;
     margin-right: 15px;
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mode-toggle img {
+    width: 40px;
+    height: 40px;
 }
 
 /* Main grid layout */
@@ -86,10 +130,5 @@ body {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
-    position: fixed; 
-    width: 100%;
-    bottom: 0;
-    border-top: 3px solid #ffb482;
-    z-index: 100; 
+    z-index: 100;
 }
