@@ -1,21 +1,49 @@
-body {
-    margin: 0;
-    padding-bottom: 80px; 
-    font-family: Arial, sans-serif;
-    cursor: url('Designing/hammer.png'), auto; /* Custom cursor */
-    background-color: #be8f0b; 
-
-body:active {
-    cursor: url('Designing/hammerclick.png'), auto; /* Cursor when clicked */
+/* Default (Light Mode) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background: #fff;
+    --footer-background: #f1f1f1;
+    --border-color: #ffb482;
 }
 
-/* Controls Logo Placement */
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #333333;
+    --text-color: #f1f1f1;
+    --header-background: #444444;
+    --footer-background: #222222;
+    --border-color: #ffb482;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.header {
+    background-color: var(--header-background);
+    border-bottom: 3px solid var(--border-color);
+}
+
+footer {
+    background-color: var(--footer-background);
+    border-top: 3px solid var(--border-color);
+}
+
+/* Basic reset for body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for header and logo */
 .header {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
-    border-bottom: 3px solid #ffb482;
 }
 
 .logo {
@@ -23,9 +51,26 @@ body:active {
     height: auto;
     margin-right: 15px;
 }
-/* Keeps Resources Organized*/
-.resources-links {
-    position: lef;
+
+/* Mode Toggle Button */
+.mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mode-toggle img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Main grid layout */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin: 20px;
 }
 
 /* Center the title */
@@ -35,13 +80,11 @@ body:active {
     font-size: 2em;
 }
 
-/* Style for video container to center the video */
+/* Video container to center the video */
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
-    width: 50%;
 }
 
 /* Video description styling */
@@ -64,13 +107,28 @@ body:active {
     margin: 20px 0;
 }
 
+/* Grid layout for video placeholders */
+.video-placeholder-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Styling for each video placeholder */
+.video-placeholder:nth-child(4/5) {
+    grid-column: 2 / 3; /* Center the first video of the second row */
+}
+
+.video-placeholder:nth-child(5) {
+    grid-column: 3 / 4; /* Place the second video of the second row next to the first */
+}
+
 /* Footer styling */
 footer {
     text-align: center;
-    padding: 35px;
-    background-color: #f1f1f1;
-    position: absolute;
-    width: 100%;
-    bottom:: 0px;
-    border-top: 3px solid #ffb482;
+    padding: 20px;
+    z-index: 100;
 }
