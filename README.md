@@ -10,18 +10,18 @@ The Theme should be added with a Radio button control or look similar to the tog
 
 **Deliverables** 
 
-- [ ] I have reviewed the concept rubric
-- [ ] I have create stories in GitHub Projects and related stories, issues & task
-- [ ] I have commented my code for readability and logical flow of information 
-- [ ] I have added the latest code to GitHub
-- [ ] I have hosted my project on GitHub pages 
-- [ ] I have submitted my GitHub Link to Beacon
-- [ ] I have added a Form validation for user name, email, password and theme
+- [X] I have reviewed the concept rubric
+- [X] I have create stories in GitHub Projects and related stories, issues & task
+- [X] I have commented my code for readability and logical flow of information 
+- [X] I have added the latest code to GitHub
+- [X] I have hosted my project on GitHub pages 
+- [X] I have submitted my GitHub Link to Beacon
+- [] I have added a Form validation for user name, email, password and theme
 - [ ] I have add a radio input control for the theme
-- [ ] I have created a profile page for the users profile form to load from local storage 
-- [ ] Store the users preferences in the Local Storage for future use.
-- [ ] Add 3 additional themes to your project 
-- [ ] I have documented my code
-- [ ] Html files have been documented 
-- [ ] CSS files have been documented 
-- [ ] JavaScript files have been documented
+- [] I have created a profile page for the users profile form to load from local storage 
+- [X] Store the users preferences in the Local Storage for future use.
+- [X] Add 3 additional themes to your project 
+- [X] I have documented my code
+- [X] Html files have been documented 
+- [X] CSS files have been documented 
+- [X] JavaScript files have been documented
