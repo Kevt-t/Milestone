@@ -1,5 +1,27 @@
-## Problem Statement
-The previous YouTube Video project scope created several limitations based on user feedback. The layout does not provide a great user experience and should be improved to increase traffic to the site. 
+**Problem Statement**
+We validated the theme request and it shows that 67% of our users requested this feature.  we should build out the feature completely in our next release to support our user base. 
 
-## Project Scope
-Create a page layout using a CSS grid that uses a main section that shows the main video that we want to play. There must be a placeholder section  below the main video that shows a list of 4 or 5 videos that can be selected to watch next.  
+**Project Scope**
+Create a form that allows the user to create a profile. The profile should take the user name, email, password & theme preference. Add a navigation menu to the top of the page with “Home” and Profile link. 
+
+Center the navigation on the page. Validate the users name contains the required length of characters (a minimum of 4 characters). The name must be more than or equal to 4 characters in length. If the name is less than or equal to three characters in length, the form should hit a validation error. User settings should be stored in local storage 
+
+The Theme should be added with a Radio button control or look similar to the toggle on the top right of your page. Add 3 or more additional themes to your project. 
+
+**Deliverables** 
+
+- [ ] I have reviewed the concept rubric
+- [ ] I have create stories in GitHub Projects and related stories, issues & task
+- [ ] I have commented my code for readability and logical flow of information 
+- [ ] I have added the latest code to GitHub
+- [ ] I have hosted my project on GitHub pages 
+- [ ] I have submitted my GitHub Link to Beacon
+- [ ] I have added a Form validation for user name, email, password and theme
+- [ ] I have add a radio input control for the theme
+- [ ] I have created a profile page for the users profile form to load from local storage 
+- [ ] Store the users preferences in the Local Storage for future use.
+- [ ] Add 3 additional themes to your project 
+- [ ] I have documented my code
+- [ ] Html files have been documented 
+- [ ] CSS files have been documented 
+- [ ] JavaScript files have been documented

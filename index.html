@@ -15,10 +15,13 @@
 
             <!-- Light/Dark Mode Toggle Button -->
             <button id="modeToggle" class="mode-toggle">
-                <img id="modeIcon" src="Designing/Light Mode Icon.png" alt="Light Mode Icon">
+                <img id="modeIcon" src="Designing/Dark Mode Icon.png" alt="Dark Mode Icon">
             </button>
         </div>
     </header>
+
+    <div class="custom-cursor"></div>
+
 
     <!-- Title for Center Page -->
     <main class="main-layout">
@@ -62,6 +65,27 @@
                 <option value="electrical">Electrical</option>
             </select>
         </div>
+
+<!-- Overlay for form popup -->
+<div id="overlay"></div> 
+
+<!-- Form for collecting user data -->
+<div id="userForm" >
+    <form id="themeForm">
+        <h2>Enter Your Details</h2>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="selectedTheme">Selected Theme:</label><br>
+        <input type="text" id="selectedTheme" name="theme" readonly><br><br>
+        
+        <button type="submit">Save Preferences</button>
+    </form>
+</div>
+
 
         <!-- Placeholder section for additional videos -->
         <div class="video-placeholder-container">
