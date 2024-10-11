@@ -11,15 +11,15 @@
     <header>
         <div class="header">  
             <!-- Website Logo -->
-            <img id="hhcLogo" src="Designing/HHC Logo.png" alt="Hard Hat Club Logo" class="logo">
+            <img src="Designing/HHC Logo.png" alt="Hard Hat Club Logo" id="logo" class="logo">
 
             <!-- Light/Dark Mode Toggle Button -->
             <button id="modeToggle" class="mode-toggle">
                 <img id="modeIcon" src="Designing/Light Mode Icon.png" alt="Light Mode Icon">
             </button>
 
-            <!-- Pumpkin Icon for Halloween -->
-            <button id="pumpkinToggle" class="pumpkin-toggle">
+            <!-- Halloween Theme Button -->
+            <button id="halloweenThemeToggle" class="theme-toggle">
                 <img id="pumpkinIcon" src="Designing/Pumpkin.png" alt="Pumpkin Icon">
             </button>
         </div>
@@ -52,82 +52,111 @@
             <p>This video provides a step-by-step guide on how to lay bricks for beginners, including using a line for alignment and setting a strong foundation.</p>
         </details>
 
-             <!-- Drop down Menu for Different Categories -->
+        <!-- Form Button -->
+        <button id="openFormButton" class="open-form-button">Save Preferences</button>
+
+        <!-- Form Popup -->
+        <div id="userForm" class="form-popup">
+            <form class="form-container">
+                <h2>Save Preferences</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="theme">Choose a Theme:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="halloween">Halloween</option>
+                </select>
+
+                <button type="button" id="savePreferences" class="btn">Save</button>
+                <button type="button" id="closeFormButton" class="btn cancel">Close</button>
+            </form>
+        </div>
+
+        <!-- Autoplay Button for Future Development -->
+        <div class="controls">
+            <label for="autoplayToggle">Auto-Play:</label>
+            <input type="checkbox" id="autoplayToggle" disabled>
+        </div>
+
+        <!-- Drop down Menu for Different Categories -->
         <div class="video-category">
             <label for="videoCategory">Choose a category:</label>
-                <select id="videoCategory" name="videoCategory">
-                    <option value="bricklaying">Bricklaying</option>
-                    <option value="plumbing">Plumbing</option>
-                    <option value="electrical">Electrical</option>
-                    </select>
+            <select id="videoCategory" name="videoCategory">
+                <option value="bricklaying">Bricklaying</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+            </select>
         </div>
 
-     <!-- Placeholder section for additional videos -->
-     <div class="video-placeholder-container">
-        <div class="video-placeholder">
-            <iframe
-                width="280"
-                height="157"
-                src="https://www.youtube.com/embed/2aAD4R52Bts?si=3KIt-yS6zzn_T3pQ&amp;controls=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="video-placeholder">
-            <iframe
-                width="280"
-                height="157"
-                src="https://www.youtube.com/embed/H6iYoin0vIg?si=GGSs0soYjzm0BKVJ&amp;controls=0&amp;start=1"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="video-placeholder">
-            <iframe
-                width="280"
-                height="157"
-                src="https://www.youtube.com/embed/vqK5bkoOF9M?si=lTOt4cEQPp8DlLTg&amp;controls=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="video-placeholder">
-            <iframe
-                class="video-player"
-                width="280"
-                height="157"
-                src="https://www.youtube.com/embed/8F4ZJ762QfM?si=HFAPDhK4l4halopB&amp;controls=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="video-placeholder">
-            <iframe
-                class="video-player"
-                width="280"
-                height="157"
-                src="https://www.youtube.com/embed/6udNHCKvXyc?si=PqvlH36nofyUU9sI&amp;controls=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
+        <!-- Placeholder section for additional videos -->
+        <div class="video-placeholder-container">
+            <div class="video-placeholder">
+                <iframe
+                    width="280"
+                    height="157"
+                    src="https://www.youtube.com/embed/2aAD4R52Bts?si=3KIt-yS6zzn_T3pQ&amp;controls=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-placeholder">
+                <iframe
+                    width="280"
+                    height="157"
+                    src="https://www.youtube.com/embed/H6iYoin0vIg?si=GGSs0soYjzm0BKVJ&amp;controls=0&amp;start=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-placeholder">
+                <iframe
+                    width="280"
+                    height="157"
+                    src="https://www.youtube.com/embed/vqK5bkoOF9M?si=lTOt4cEQPp8DlLTg&amp;controls=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-placeholder">
+                <iframe
+                    class="video-player"
+                    width="280"
+                    height="157"
+                    src="https://www.youtube.com/embed/8F4ZJ762QfM?si=HFAPDhK4l4halopB&amp;controls=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-placeholder">
+                <iframe
+                    class="video-player"
+                    width="280"
+                    height="157"
+                    src="https://www.youtube.com/embed/6udNHCKvXyc?si=PqvlH36nofyUU9sI&amp;controls=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </main>
 
@@ -138,28 +167,6 @@
             <a href="#">Instagram</a>
         </p>
     </footer>
-
-    <!-- Hidden form popup -->
-    <div id="themeFormContainer" class="form-container hidden">
-        <form id="themeForm" class="theme-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="themeSelect">Select Theme:</label>
-            <select id="themeSelect" name="theme">
-                <option value="default">Default</option>
-                <option value="blue-theme">Blue</option>
-                <option value="green-theme">Green</option>
-                <option value="orange-theme">Orange</option>
-                <option value="purple-theme">Purple</option>
-            </select>
-
-            <button type="submit">Save</button>
-        </form>
-    </div>
 
     <!-- Link to external JS -->
     <script src="script.js"></script>

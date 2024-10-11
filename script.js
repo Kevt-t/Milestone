@@ -1,33 +1,47 @@
 const modeToggle = document.getElementById('modeToggle');
 const modeIcon = document.getElementById('modeIcon');
-const pumpkinToggle = document.getElementById('pumpkinToggle');
-const hhcLogo = document.getElementById('hhcLogo');
 const body = document.body;
-const themeFormContainer = document.getElementById('themeFormContainer');
-const themeForm = document.getElementById('themeForm');
-const themeSelect = document.getElementById('themeSelect');
+const halloweenThemeToggle = document.getElementById('halloweenThemeToggle');
+const pumpkinIcon = document.getElementById('pumpkinIcon');
+const logo = document.getElementById('logo');
+const formPopup = document.getElementById('userForm');
+const openFormButton = document.getElementById('openFormButton');
+const closeFormButton = document.getElementById('closeFormButton');
+const savePreferencesButton = document.getElementById('savePreferences');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const themeSelect = document.getElementById('theme');
 
-// Check for previously saved theme or mode in local storage
+// Check for previously saved theme in local storage
 const savedTheme = localStorage.getItem('theme');
 const savedName = localStorage.getItem('name');
 const savedEmail = localStorage.getItem('email');
-const savedLogo = localStorage.getItem('logo');
 
-// Apply saved user preferences (theme and logo)
+// Apply the saved theme
 if (savedTheme) {
-    body.classList.add(savedTheme);
-    themeSelect.value = savedTheme;
+    document.body.classList.add(savedTheme);
+
+    if (savedTheme === 'dark-mode') {
+        modeIcon.src = 'Designing/Light Mode Icon.png';
+    } else if (savedTheme === 'halloween-mode') {
+        pumpkinIcon.src = 'Designing/Pumpkin.png';
+        logo.classList.add('halloween-logo');
+    } else {
+        modeIcon.src = 'Designing/Dark Mode Icon.png';
+    }
 }
 
-if (savedLogo) {
-    hhcLogo.src = savedLogo;
+// Populate form fields with saved data
+if (savedName) {
+    nameInput.value = savedName;
 }
 
-// Update the icon based on the saved theme/mode
-if (savedTheme === 'dark-mode') {
-    modeIcon.src = 'Designing/Light Mode Icon.png';
-} else {
-    modeIcon.src = 'Designing/Dark Mode Icon.png';
+if (savedEmail) {
+    emailInput.value = savedEmail;
+}
+
+if (savedTheme) {
+    themeSelect.value = savedTheme.replace('-mode', '');
 }
 
 // Toggle dark mode on button click
@@ -39,38 +53,54 @@ modeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark-mode');
     } else {
         modeIcon.src = 'Designing/Dark Mode Icon.png';
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme', 'light-mode');
     }
 });
 
-// Pumpkin icon click to change the logo
-pumpkinToggle.addEventListener('click', () => {
-    hhcLogo.src = 'Designing/HHC Logo (Halloween).png';
-    localStorage.setItem('logo', 'Designing/HHC Logo (Halloween).png');
+// Toggle Halloween theme on button click
+halloweenThemeToggle.addEventListener('click', () => {
+    body.classList.toggle('halloween-mode');
 
-    // Show the theme form when pumpkin is clicked
-    themeFormContainer.classList.remove('hidden');
+    if (body.classList.contains('halloween-mode')) {
+        logo.classList.add('halloween-logo');
+        localStorage.setItem('theme', 'halloween-mode');
+    } else {
+        logo.classList.remove('halloween-logo');
+        localStorage.setItem('theme', 'light-mode');
+    }
 });
 
-// Handle form submission to save user data and theme
-themeForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+// Open form popup
+openFormButton.addEventListener('click', () => {
+    formPopup.style.display = 'block';
+});
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const selectedTheme = themeSelect.value;
+// Close form popup
+closeFormButton.addEventListener('click', () => {
+    formPopup.style.display = 'none';
+});
 
-    // Save user preferences to local storage
+// Save user preferences
+savePreferencesButton.addEventListener('click', () => {
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const theme = themeSelect.value + '-mode';
+
+    // Save preferences in localStorage
     localStorage.setItem('name', name);
     localStorage.setItem('email', email);
-    localStorage.setItem('theme', selectedTheme);
+    localStorage.setItem('theme', theme);
 
     // Apply the selected theme
-    body.classList.remove('blue-theme', 'green-theme', 'orange-theme', 'purple-theme', 'default');
-    if (selectedTheme !== 'default') {
-        body.classList.add(selectedTheme);
+    document.body.className = '';  // Reset all classes
+    document.body.classList.add(theme);
+
+    if (theme === 'halloween-mode') {
+        logo.classList.add('halloween-logo');
+    } else {
+        logo.classList.remove('halloween-logo');
     }
 
-    // Hide the form after submission
-    themeFormContainer.classList.add('hidden');
+    // Close the form popup
+    formPopup.style.display = 'none';
 });

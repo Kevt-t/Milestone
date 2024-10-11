@@ -15,62 +15,34 @@ body.dark-mode {
     --border-color: #ffb482;
 }
 
-/* Blue Theme */
-body.blue-theme {
-    --background-color: #e0f7fa;
-    --text-color: #01579b;
-    --header-background: #0288d1;
-    --footer-background: #03a9f4;
-    --border-color: #0277bd;
+/* Halloween Mode */
+body.halloween-mode {
+    --background-color: #1a1a1a;
+    --text-color: #ff751a;
+    --header-background: #222222;
+    --footer-background: #111111;
+    --border-color: #ff751a;
 }
 
-/* Green Theme */
-body.green-theme {
-    --background-color: #e8f5e9;
-    --text-color: #2e7d32;
-    --header-background: #66bb6a;
-    --footer-background: #81c784;
-    --border-color: #388e3c;
-}
-
-/* Orange Theme */
-body.orange-theme {
-    --background-color: #fff3e0;
-    --text-color: #e65100;
-    --header-background: #ff9800;
-    --footer-background: #ffb74d;
-    --border-color: #ef6c00;
-}
-
-/* Purple Theme */
-body.purple-theme {
-    --background-color: #f3e5f5;
-    --text-color: #4a148c;
-    --header-background: #6a1b9a;
-    --footer-background: #8e24aa;
-    --border-color: #7b1fa2;
+#logo.halloween-logo {
+    content: url('Designing/HHC Logo (Halloween).png');
 }
 
 /* Apply Variables Globally */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-}
-
-/* Basic reset for body */
-body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header and Logo Styling */
 .header {
+    background-color: var(--header-background);
+    border-bottom: 3px solid var(--border-color);
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: var(--header-background);
-    border-bottom: 3px solid var(--border-color);
 }
 
 .logo {
@@ -80,51 +52,144 @@ body {
 }
 
 /* Mode Toggle Button */
-.mode-toggle, .pumpkin-toggle {
+.mode-toggle {
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: auto; /* Ensures the buttons float to the right */
 }
 
-.mode-toggle img, .pumpkin-toggle img {
-    width: 40px;
-    height: 40px;
+.mode-toggle img {
+    width: 100px;
+    height: 100px;
 }
 
-/* Main layout styling */
+/* Halloween Theme Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.theme-toggle img {
+    width: 100px;
+    height: 100px;  ;
+}
+
+/* Main grid layout */
 .main-layout {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     gap: 20px;
     margin: 20px;
 }
 
+/* Center the title */
 .title {
     text-align: center;
     margin-top: 20px;
     font-size: 2em;
 }
 
-/* Video and description styling */
+/* Video container to center the video */
 .video-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+/* Video description styling */
 .video-description {
     text-align: center;
     margin: 20px auto;
     width: 80%;
 }
 
-/* Video placeholders */
+/* Styling for form button */
+.open-form-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1em;
+    background-color: var(--border-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Popup Form Styles */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 2px solid #888;
+    z-index: 1000;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input,
+.form-container select {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn.cancel {
+    background-color: red;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Styling for controls (if added) */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Styling for video category dropdown */
+.video-category {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Grid layout for video placeholders */
 .video-placeholder-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
     gap: 20px;
     justify-items: center;
     margin: 0 auto;
     width: 80%;
+}
+
+.video-placeholder iframe {
+    width: 280px;
+    height: 157px;
 }
 
 /* Footer styling */
@@ -135,25 +200,13 @@ footer {
     border-top: 3px solid var(--border-color);
 }
 
-/* Hidden form styling */
-.hidden {
-    display: none;
+/* Footer links */
+footer p a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.form-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #ccc;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.theme-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+footer p a:hover {
+    text-decoration: underline;
 }
