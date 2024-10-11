@@ -1,4 +1,3 @@
-/* Default (Light Mode) */
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
@@ -16,7 +15,56 @@ body.dark-mode {
     --border-color: #ffb482;
 }
 
-/* Apply Variables */
+/* Halloween Theme */
+body.halloween-theme {
+    background-color: #1c1c1c; /* Dark gray for background */
+    color: #ff7518; /* Bright orange for text */
+}
+
+footer.halloween-theme {
+    background-color: #ff7518; /* Orange for the footer */
+    border-top: 3px solid #ff4500; /* Red-orange border */
+}
+
+
+/* Halloween Logo */
+body.halloween-theme img.logo {
+    content: url('Designing/HHC Logo (Halloween).png'); /* Halloween logo */
+}
+
+/* Builder Theme */
+body.builder-theme {
+    cursor: url('Designing/hammer.png'), auto; /* Hammer cursor for Builder theme */
+}
+
+/* When clicking, change to hammer hitting icon */
+body.builder-theme.clicked {
+    cursor: url('Designing/hammerclick.png'), auto; /* Hammer hitting on click */
+}
+
+
+
+
+
+/* Orange Theme */
+body.orange-theme {
+    --background-color: #fff3e0;
+    --text-color: #e65100;
+    --header-background: #ff9800;
+    --footer-background: #ffb74d;
+    --border-color: #ef6c00;
+}
+
+/* Purple Theme */
+body.purple-theme {
+    --background-color: #f3e5f5;
+    --text-color: #4a148c;
+    --header-background: #6a1b9a;
+    --footer-background: #8e24aa;
+    --border-color: #7b1fa2;
+}
+
+/* Apply Variables Globally */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -117,18 +165,20 @@ body {
     width: 80%;
 }
 
-/* Styling for each video placeholder */
-.video-placeholder:nth-child(4/5) {
-    grid-column: 2 / 3; /* Center the first video of the second row */
-}
-
-.video-placeholder:nth-child(5) {
-    grid-column: 3 / 4; /* Place the second video of the second row next to the first */
-}
-
 /* Footer styling */
 footer {
     text-align: center;
     padding: 20px;
     z-index: 100;
+}
+
+/* Style for theme selector */
+.theme-selector {
+    text-align: center;
+    margin: 20px;
+}
+
+#themeSelect {
+    padding: 5px;
+    font-size: 16px;
 }
